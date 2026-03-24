@@ -1,0 +1,58 @@
+{
+  "kind": "singleType",
+  "collectionName": "pricing_pages",
+  "info": {
+    "singularName": "pricing-page",
+    "pluralName": "pricing-pages",
+    "displayName": "Pricing Page",
+    "description": "Pricing configurator page for Chili Cloud Storage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "headline": {
+      "type": "string",
+      "required": true
+    },
+    "subheadline": {
+      "type": "text"
+    },
+    "tiers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pricing.tier"
+    },
+    "addons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pricing.addon"
+    },
+    "freeTrialDays": {
+      "type": "integer",
+      "default": 20
+    },
+    "freeTrialStorage": {
+      "type": "string",
+      "default": "1 TB"
+    },
+    "freeTrialCTA": {
+      "type": "string",
+      "default": "Jetzt kostenlos testen"
+    },
+    "comparisonNote": {
+      "type": "richtext"
+    },
+    "faqs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::faq.faq"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

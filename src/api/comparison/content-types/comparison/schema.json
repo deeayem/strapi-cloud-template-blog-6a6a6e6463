@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comparisons",
+  "info": {
+    "singularName": "comparison",
+    "pluralName": "comparisons",
+    "displayName": "Comparison",
+    "description": "Competitor comparison pages (vs. Wasabi, AWS S3, Backblaze, Infomaniak)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "competitorName": {
+      "type": "string",
+      "required": true
+    },
+    "competitorLogo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "headline": {
+      "type": "string"
+    },
+    "introduction": {
+      "type": "richtext"
+    },
+    "comparisonMatrix": {
+      "type": "json"
+    },
+    "chiliAdvantages": {
+      "type": "json"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "verdict": {
+      "type": "richtext"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

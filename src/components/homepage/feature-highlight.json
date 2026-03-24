@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_homepage_feature_highlights",
+  "info": {
+    "displayName": "Feature Highlight",
+    "icon": "check-circle",
+    "description": "Feature highlight card for homepage"
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

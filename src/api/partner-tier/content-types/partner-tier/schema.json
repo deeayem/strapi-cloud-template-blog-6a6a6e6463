@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partner_tiers",
+  "info": {
+    "singularName": "partner-tier",
+    "pluralName": "partner-tiers",
+    "displayName": "Partner Tier",
+    "description": "Partner program tiers (Registered, Silver, Gold, Platinum)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "discountPercent": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "requirements": {
+      "type": "json"
+    },
+    "benefits": {
+      "type": "json"
+    },
+    "sortOrder": {
+      "type": "integer",
+      "default": 0
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

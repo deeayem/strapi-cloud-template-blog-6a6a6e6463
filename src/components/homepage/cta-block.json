@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_homepage_cta_blocks",
+  "info": {
+    "displayName": "CTA Block",
+    "icon": "cursor",
+    "description": "Call-to-action block"
+  },
+  "attributes": {
+    "headline": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "buttonLink": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": ["primary", "secondary", "dark"],
+      "default": "primary"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_pricing_addons",
+  "info": {
+    "displayName": "Add-On",
+    "icon": "plus-circle",
+    "description": "Pricing add-on module"
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "pricePerUnit": {
+      "type": "decimal"
+    },
+    "unit": {
+      "type": "string"
+    },
+    "isPerTB": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

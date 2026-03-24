@@ -4,8 +4,8 @@
   "info": {
     "singularName": "article",
     "pluralName": "articles",
-    "displayName": "Article",
-    "description": "Create your blog content"
+    "displayName": "Blog Article",
+    "description": "Blog articles and content hub"
   },
   "options": {
     "draftAndPublish": true
@@ -13,21 +13,25 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
-    },
-    "description": {
-      "type": "text",
-      "maxLength": 80
+      "type": "string",
+      "required": true
     },
     "slug": {
       "type": "uid",
       "targetField": "title"
     },
+    "description": {
+      "type": "text",
+      "maxLength": 160
+    },
+    "content": {
+      "type": "richtext"
+    },
     "cover": {
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images", "files", "videos"]
+      "allowedTypes": ["images"]
     },
     "author": {
       "type": "relation",
@@ -41,9 +45,27 @@
       "target": "api::category.category",
       "inversedBy": "articles"
     },
+    "tags": {
+      "type": "json"
+    },
+    "readingTime": {
+      "type": "integer"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "publishedAt": {
+      "type": "datetime"
+    },
     "blocks": {
       "type": "dynamiczone",
       "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
     }
   }
 }

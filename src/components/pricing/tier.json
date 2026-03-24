@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_pricing_tiers",
+  "info": {
+    "displayName": "Pricing Tier",
+    "icon": "dollar-sign",
+    "description": "Pricing tier for configurator"
+  },
+  "attributes": {
+    "volumeLabel": {
+      "type": "string",
+      "required": true
+    },
+    "volumeMinTB": {
+      "type": "integer"
+    },
+    "volumeMaxTB": {
+      "type": "integer"
+    },
+    "pricePAYG": {
+      "type": "decimal"
+    },
+    "priceRC1": {
+      "type": "decimal"
+    },
+    "priceRC3": {
+      "type": "decimal"
+    },
+    "priceRC5": {
+      "type": "decimal"
+    }
+  }
+}

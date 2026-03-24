@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "use_cases",
+  "info": {
+    "singularName": "use-case",
+    "pluralName": "use-cases",
+    "displayName": "Use Case",
+    "description": "Use case landing pages (Backup, Media, Compliance, DevOps, MSP)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "headline": {
+      "type": "string"
+    },
+    "shortDescription": {
+      "type": "text",
+      "maxLength": 160
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "targetPersona": {
+      "type": "enumeration",
+      "enum": ["IT Manager", "CTO", "CISO", "CFO", "DevOps", "MSP"]
+    },
+    "keyBenefits": {
+      "type": "json"
+    },
+    "relatedFeatures": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::feature.feature"
+    },
+    "ctaText": {
+      "type": "string",
+      "default": "Jetzt kostenlos testen"
+    },
+    "ctaLink": {
+      "type": "string",
+      "default": "/trial"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}
